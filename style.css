@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: none;
+}
+
+.navcontainer {
+    width: 100vw;
+    background-color: #161d20;
+background-image: linear-gradient(160deg, #161d20 0%, #43605c 100%);
+
+    min-height: 70px;
+    position: relative;
+}
+
+#navlist {
+    margin-left: 15px;
+    margin-right: 15px;
+    list-style: none;
+    font-size: 2rem;
+    color: azure;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.1rem;
+}
+
+#navlink {
+    display: flex;
+    gap: 30px;
+}
+
+a {
+    color: azure;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #161d20;
+background-image: linear-gradient(160deg, #161d20 0%, #43605c 100%);
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: azure;
+}
+
+.contentbox {
+    width: 70%;
+    margin: auto;
+    box-shadow: 0px 0px 30px black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.rightbox {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.rightbox img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+    
+}
+
+.rightbox:hover img {
+    transform: scale(1.1);
+     /* Only scale the image */
+}
+
+.leftbox h2 {
+    font-size: 2rem;
+}
+
+.rightbox .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Stronger background color for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;  /* Smooth fade-in effect */
+}
+
+.rightbox:hover .overlay {
+    opacity: 1; /* Show overlay when hovering */
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(1.1); /* Smooth fade-in effect */
+}
+
+.rightbox .overlay span {
+    color: white;
+    font-size: 1.2rem;
+    
+}
